@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rental_app/presentation/pages/car_list_page.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -42,7 +43,12 @@ class IntroPage extends StatelessWidget {
                   width: 318,
                   height: 54,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => CarList()),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.black,
                       backgroundColor: Colors.white,

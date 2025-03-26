@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:rental_app/pages/intro_page.dart';
+import 'package:rental_app/presentation/pages/intro_page.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -20,9 +20,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Rental App",
+ 
       home: IntroPage(),
     );
   }
