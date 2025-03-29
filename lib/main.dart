@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:rental_app/presentation/pages/intro_page.dart';
+import 'package:rental_app/presentation/pages/maps_details_page.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -23,8 +24,16 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Rental App",
- 
-      home: IntroPage(),
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        
+        appBarTheme: const AppBarTheme(
+          surfaceTintColor: Colors.transparent,
+          backgroundColor: Colors.white,
+          elevation: 0,
+        ),
+      ),
+      home: MapsDetailsPage(),
     );
   }
 }

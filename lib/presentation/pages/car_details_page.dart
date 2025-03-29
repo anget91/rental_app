@@ -9,12 +9,7 @@ class CarDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [Icon(Icons.info_outline), Text(' Information')],
-        ),
-      ),
+      appBar: AppBar(title: Text(car.model, style: TextStyle(fontSize: 20))),
       body: Column(
         children: [
           CarCard(
